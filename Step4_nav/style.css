@@ -1,0 +1,115 @@
+/* ===== Etapes 1 et 2 : Layout ===== */
+
+/* Annuler les marges externes et internes de tous les éléments */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* Le conteneur principal */
+.container {
+	background-color: red;
+	width: 90%;
+	max-width: 1100px;
+	margin: 0 auto;
+	height: auto; /* la hauteur s'adapte au contenu */
+	border: 1px solid black;
+}
+
+/* Le pied de page */
+footer {
+	background-color: red;
+	width: 100%;
+	height: 100px;
+	border: 1px solid black;
+}
+
+/* ===== Etape 2 : Layout 2 ===== */
+
+/* La barre de navigation et la zone showcase */
+.main-nav,
+.showcase {
+	background-color: #CCCCCC;
+	width: 100%;
+	height: 60px;
+	border: 1px solid black;
+}
+
+/* ===== Etape 3 : Layout 3 ===== */
+
+/* Les sections du contenu principal et du pied de page */
+.home-cards,
+#bigData-intro,
+.ruban,
+.follow,
+.links,
+.sub-footer {
+	background-color: #d3eaac;
+	width: 100%;
+	height: 100px;
+	border: 1px solid black;
+}
+
+/* ===== Etape 4 : Nav ===== */
+
+/* Le corps de la page */
+body {
+	font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+	background-color: white;
+	color: black;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+/* Les liens : noirs et sans soulignement */
+a {
+	color: #262626;
+	text-decoration: none;
+}
+
+/* Les listes : sans puces */
+ul {
+	list-style-type: none;
+}
+
+/* La barre de navigation principale (flexbox) */
+.main-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 20px; /* 20px + 2 x 20px de padding = 60px de haut */
+	padding: 20px 0;
+	font-size: 13px;
+	background-color: white;
+}
+
+/* Le logo */
+.main-nav .logo {
+	width: 110px;
+}
+
+/* Les menus (flexbox) : éléments disposés horizontalement */
+.main-nav ul {
+	display: flex;
+}
+
+/* Le menu principal prend toute la largeur disponible */
+.main-nav .main-menu {
+	width: 100%;
+	margin-left: 20px;
+}
+
+/* Chaque élément du menu est séparé par 10px */
+.main-nav li {
+	padding: 0 10px;
+}
+
+/* Léger espace de 2px sous le texte des liens */
+.main-nav a {
+	padding-bottom: 2px;
+}
+
+/* Au survol : bordure inférieure noire de 2px */
+.main-nav a:hover {
+	border-bottom: 2px solid black;
+}
