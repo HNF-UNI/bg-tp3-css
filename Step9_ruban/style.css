@@ -1,0 +1,264 @@
+/* ===== Etapes 1 et 2 : Layout ===== */
+
+/* Annuler les marges externes et internes de tous les éléments */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* Le conteneur principal */
+.container {
+	background-color: red;
+	width: 90%;
+	max-width: 1100px;
+	margin: 0 auto;
+	height: auto; /* la hauteur s'adapte au contenu */
+	border: 1px solid black;
+}
+
+/* Le pied de page */
+footer {
+	background-color: red;
+	width: 100%;
+	height: 100px;
+	border: 1px solid black;
+}
+
+/* ===== Etape 2 : Layout 2 ===== */
+
+/* La barre de navigation et la zone showcase */
+.main-nav,
+.showcase {
+	background-color: #CCCCCC;
+	width: 100%;
+	height: 60px;
+	border: 1px solid black;
+}
+
+/* ===== Etape 3 : Layout 3 ===== */
+
+/* Les sections du contenu principal et du pied de page */
+.home-cards,
+#bigData-intro,
+.ruban,
+.follow,
+.links,
+.sub-footer {
+	background-color: #d3eaac;
+	width: 100%;
+	height: 100px;
+	border: 1px solid black;
+}
+
+/* ===== Etape 4 : Nav ===== */
+
+/* Le corps de la page */
+body {
+	font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+	background-color: white;
+	color: black;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+/* Les liens : noirs et sans soulignement */
+a {
+	color: #262626;
+	text-decoration: none;
+}
+
+/* Les listes : sans puces */
+ul {
+	list-style-type: none;
+}
+
+/* La barre de navigation principale (flexbox) */
+.main-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 20px; /* 20px + 2 x 20px de padding = 60px de haut */
+	padding: 20px 0;
+	font-size: 13px;
+	background-color: white;
+}
+
+/* Le logo */
+.main-nav .logo {
+	width: 110px;
+}
+
+/* Les menus (flexbox) : éléments disposés horizontalement */
+.main-nav ul {
+	display: flex;
+}
+
+/* Le menu principal prend toute la largeur disponible */
+.main-nav .main-menu {
+	width: 100%;
+	margin-left: 20px;
+}
+
+/* Chaque élément du menu est séparé par 10px */
+.main-nav li {
+	padding: 0 10px;
+}
+
+/* Léger espace de 2px sous le texte des liens */
+.main-nav a {
+	padding-bottom: 2px;
+}
+
+/* Au survol : bordure inférieure noire de 2px */
+.main-nav a:hover {
+	border-bottom: 2px solid black;
+}
+
+/* ===== Etape 5 : Showcase ===== */
+
+/* La section showcase : image centrée en haut, réduite à 30%,
+   limitée à la zone de contenu, contenu en colonne (flexbox) */
+.showcase {
+	width: 100%;
+	height: 300px; /* 300px + 2 x 50px de padding = 400px de haut */
+	background: url("../img/slide1.png") no-repeat center top / 30% content-box;
+	background-color: white;
+	border: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: end;
+	padding: 50px 0;
+	margin-bottom: 20px;
+}
+
+/* Les titres et paragraphes du showcase */
+.showcase h2,
+.showcase p {
+	margin-bottom: 10px;
+}
+
+/* Le bouton */
+.btn {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 10px 20px;
+	border-radius: 10px;
+	background-color: #378ff5;
+	color: white;
+	font-weight: bold;
+}
+
+/* Effet d'opacité au survol du bouton */
+.btn:hover {
+	opacity: 0.8;
+}
+
+/* La classe dark inverse les couleurs */
+.dark {
+	color: white;
+}
+
+.dark .btn {
+	background-color: #f4f4f4;
+	color: #333;
+}
+
+/* ===== Etape 6 : Home-cards 1 ===== */
+
+/* Grille de 4 colonnes de taille égale */
+.home-cards {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 20px;
+	margin-bottom: 40px;
+	background-color: white;
+	width: auto;
+	height: auto;
+	border: none;
+}
+
+/* Les images s'adaptent à la largeur de leur bloc */
+.home-cards img {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+/* Les titres */
+.home-cards h3 {
+	margin-bottom: 5px;
+}
+
+/* Les liens */
+.home-cards a {
+	display: inline-block;
+	padding-top: 10px;
+	color: #0067b8;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+/* Au survol d'un lien, l'icône se décale vers la droite */
+.home-cards a:hover i {
+	margin-left: 10px;
+}
+
+/* ===== Etape 7 : Showcase BigData ===== */
+
+/* La section bigData-intro : image centrée et ajustée au conteneur */
+#bigData-intro {
+	height: 250px; /* 250px + 100px de padding en bas = 350px de haut */
+	background: url("../img/bigData.png") no-repeat center / cover;
+	margin-bottom: 20px;
+	padding-bottom: 100px;
+	border: none;
+}
+
+/* Le bloc de contenu interne */
+#bigData-intro .content {
+	width: 40%;
+	color: #262626;
+	padding: 50px 0 0 30px;
+}
+
+/* Les paragraphes : 10px en haut et 20px en bas */
+#bigData-intro p {
+	margin: 10px 0 20px 0;
+}
+
+/* ===== Etape 8 : Home-cards 2 ===== */
+
+/* Même chose que pour le Home-cards 1 : la deuxième section
+   (id="bigData") possède aussi la classe home-cards, elle reçoit
+   donc déjà les règles .home-cards de l'étape 6 (grille de 4 colonnes,
+   images, titres et liens). */
+
+/* ===== Etape 9 : Ruban ===== */
+
+/* La section ruban : image centrée, ajustée au conteneur
+   et décalée vers le haut */
+.ruban {
+	width: 100%;
+	height: 350px;
+	background: url("../img/carbon2.jpg") no-repeat center / cover;
+	background-position: center -300px;
+	border: none;
+}
+
+/* Le bloc interne */
+.ruban .content {
+	width: 55%;
+	color: white;
+	padding: 80px 0 0 30px;
+}
+
+/* Les paragraphes : 10px en haut et 20px en bas */
+.ruban p {
+	margin: 10px 0 20px 0;
+}
+
+/* Les boutons dans un conteneur sombre */
+.dark .btn {
+	background-color: #03254c;
+	color: white;
+}
